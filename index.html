@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>test</title>
+    </head>
+    <body>
+       <div class="news-story">
+
+        </div> 
+        <script type="text/javascript">
+            var json = {
+                "items": [
+                    {
+                    "name": "IIIT-H",
+                    "url": "www.iiith.com"
+                    },
+                    {
+                    "name": "IIT-Delhi",
+                    "url": "www.iitd.com"
+                    }
+                ]
+            };
+
+            var news = document.getElementsByClassName("news-story")[0];
+            var items = json.items;
+            for(var i = 0; i < items.length; i++) {
+                               var h5 = document.createElement("h5");
+                               h5.innerHTML = items[i].name;
+                               news.appendChild(h5);
+                               var p = document.createElement("p");
+                               p.innerHTML = items[i].url;
+                               news.appendChild(p);
+
+                               }
+
+        </script>
+    </body>
+</html>
